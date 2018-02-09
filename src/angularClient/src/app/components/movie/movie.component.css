@@ -1,0 +1,9 @@
+img
+{
+    width:80%;/*adjust this value to your needs*/
+    height:auto;
+}
+.search-results{ 
+    height : 37rem;
+    overflow: scroll;
+}

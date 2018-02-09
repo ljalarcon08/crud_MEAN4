@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-10 search-results" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()" [scrollWindow]="false">
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Movie ID</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Rating</th>
+          <th>Image</th>
+          <th clospan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td>{{movie.movie_id}}</td>
+          <td>{{movie.title}}</td>
+          <td>{{movie.release_year}}</td>
+          <td>{{movie.rating}}</td>
+          <td><img class="img-responsive" src="{{movie.image}}" onError="this.src='assets/images/image-not-found.png'"/></td>
+          <!--<td><button class="btn btn-primary" (click)="updateMovie(movie)"><i class="fa fa-file-text"></i></button></td>-->
+          <td><a class="btn btn-primary" [routerLink]="['edit']" [queryParams]="{movie_id:movie.movie_id}"><i class="fa fa-file-text"></i></a></td>
+          <td><button class="btn btn-danger" (click)="deleteMovie(movie.movie_id)"><i class="fa fa-trash"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
