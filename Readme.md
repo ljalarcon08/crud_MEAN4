@@ -20,6 +20,13 @@ crud_MEAN4/model/db.json, por defecto:
 
 { "mongo":{ "host":"localhost", "db":"movies" } }
 
-To modified Angular4 access to crud_MEAN4\src\angularClient.
+To modified Angular4:
 
-After finishing the modifications, execute ng build and copy dist folder to crud_MEAN4\src
+1.  access to crud_MEAN4\src\angularClient.
+2.  Execute npm install
+3.  For develop: 
+    -   Node project must be executed.
+    -   ng serve, access to http://localhost:4200
+4.  After finishing the modifications: 
+    -   Execute ng build
+    -   Copy generated dist folder to crud_MEAN4\src
