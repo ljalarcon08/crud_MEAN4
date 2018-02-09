@@ -34,10 +34,9 @@ app.use(express.static(path.join(__dirname,'dist')));
 
 
 app.listen(app.get('port'),()=>{
-    console.log('READY! '+app.get('port'));
+    console.log('READY ON PORT '+app.get('port'));
     checkData();
 });
-console.log('PRRRRR');
 
 function checkData(){
     movieModel.countAll((count)=>{
